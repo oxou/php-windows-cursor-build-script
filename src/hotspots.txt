@@ -1,0 +1,15 @@
+#cursorName,positionX,positionY
+alternate-select,4,0
+busy,7,11
+diagonal-resize-1,7,7
+diagonal-resize-2,7,7
+help-select,0,0
+horizontal-resize,8,4
+link-select,5,0
+move,9,9
+normal-select,0,0
+precision-select,8,8
+text-select,5,10
+unavailable,0,0
+vertical-resize,4,8
+working-in-background,0,0
