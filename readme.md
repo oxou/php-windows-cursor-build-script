@@ -4,6 +4,7 @@
 ## Introduction
 
 Cursors provided in the `src` directory have been sourced from [here](https://github.com/mdomlop/retrosmart-x11-cursors).
+Thanks [@mdomlop](https://github.com/mdomlop)
 
 ## Building
 
