@@ -16,7 +16,8 @@ Once you have everything set up, simply run "make.bat" (Windows) or "./make.sh" 
 
 ---
 
-## Note
+## Notes
 
-You should be able to use this script on Linux but cursors themselves only
-apply to Windows.
+- Generated cursors can only be applied on Windows platforms.
+- Build script can only build static cursors.
+- Make sure you color the transparency mask as Pink `RGB: 255 0 255` `HEX: #F0F`
