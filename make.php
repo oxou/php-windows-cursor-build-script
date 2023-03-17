@@ -3,7 +3,7 @@
 // Copyright (C) Nurudin Imsirovic <github.com/oxou>
 // Cursor build script for Windows platforms
 // Created: 2023-03-16 07:01 PM
-// Updated: 2023-03-17 07:32 PM
+// Updated: 2023-03-17 07:59 PM
 
 $imagemagick_exe = "C:\\env\\magick.exe";
 
@@ -20,6 +20,10 @@ if (!file_exists(__DIR__ . "/out"))
 // Helper functions
 function __write_cursor_hotspot($file, $x, $y) {
     $data = file_get_contents($file);
+
+    // Fix +1 offset
+    $x = abs($x - 1);
+    $y = abs($y - 1);
 
     // Overwrite X and Y position
     $data[0x0A] = hex2bin(str_pad(dechex($x), 2, '0', STR_PAD_LEFT));
