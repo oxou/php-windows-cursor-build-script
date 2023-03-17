@@ -3,7 +3,7 @@
 // Copyright (C) Nurudin Imsirovic <github.com/oxou>
 // Cursor build script for Windows platforms
 // Created: 2023-03-16 07:01 PM
-// Updated: 2023-03-16 07:50 PM
+// Updated: 2023-03-17 07:32 PM
 
 $imagemagick_exe = "C:\\env\\magick.exe";
 
@@ -92,11 +92,14 @@ $cursors_count = sizeof($cursors) * sizeof($types);
 $cursor_count = 0;
 
 foreach ($types as $type) {
-    $status = mkdir(__DIR__ . "/out/" . $type);
+    $exists = file_exists(__DIR__ . "/out/" . $type);
 
-    if ($status == false) {
-        echo "\x1B[31mError: Building directory for cursor type $type failed.\x1B[0m\n";
-        continue;
+    if ($exists == false) {
+        $status = @mkdir(__DIR__ . "/out/" . $type);
+        if ($status === false) {
+            echo "\x1B[31mError: Building directory for cursor type $type failed.\x1B[0m\n";
+            continue;
+        }
     }
 
     foreach ($cursors as $cursor) {
